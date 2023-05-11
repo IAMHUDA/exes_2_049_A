@@ -3,8 +3,30 @@ using namespace std;
 
 void sort(int[45], int, int);
 
-int huda[45] = { 1,2,3,8,6,5,77,0,9,10 };
+int huda[45]; 
 int n = 10;
+
+void input() {
+    while (true)
+    {
+        cout << "masukan panjang elemen array: ";
+        cin >> n;
+
+        if (n <= 20)
+            break;
+        else
+            cout << "\nMaksimum panjang array adalah 10" << endl;
+    }
+    cout << "\n==================" << endl;
+    cout << "membuat elemen array" << endl;
+    cout << "\n==================" << endl;
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << "<" << (i + 1) << ">";
+        cin >> huda[i];
+    }
+}
 
 void search()
 {
@@ -59,6 +81,8 @@ void sort(int huda[45], int left, int right)
 
 int main()
 {
+
+    input();
   
     search();
 
